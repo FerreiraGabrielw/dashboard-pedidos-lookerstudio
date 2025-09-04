@@ -1,5 +1,5 @@
 ---
-title: "Projeto: Dashboard de Pedidos - Análise de Vendas e Logística"
+title: "Project: Order Dashboard - Sales and Logistics Analysis"
 author: "Gabriel Ferreira"
 date: "2024-06-10"
 format:
@@ -9,42 +9,42 @@ format:
     toc: false
 
 ---
-# Introdução
+# Introduction
 
-Este projeto apresenta um Dashboard de análise de pedidos, desenvolvido no **Looker Studio**. O principal objetivo é fornecer uma visão abrangente e detalhada sobre o volume de pedidos, a base de clientes, a distribuição geográfica das vendas e as tendências de consumo ao longo do tempo. Este painel visa monitorar o desempenho de vendas, identificar mercados promissores, otimizar a cadeia de suprimentos e aprimorar a experiência do cliente através da análise de tipos de despacho e localidades.
+This project presents an Order Analysis Dashboard, developed in **Looker Studio**. The main objective is to provide a comprehensive and detailed view of order volume, customer base, geographical sales distribution, and consumption trends over time. This dashboard aims to monitor sales performance, identify promising markets, optimize the supply chain, and enhance the customer experience through the analysis of dispatch types and locations.
 
-## Estrutura do Projeto
+## Project Structure
 
-O dashboard é organizado para oferecer diferentes perspectivas sobre os dados de pedidos:
+The dashboard is organized to offer different perspectives on order data:
 
-*   **Visão Geral de Pedidos e Clientes**: Indicadores chave sobre o número total de clientes, pedidos, estados atendidos e segmentos de mercado.
-*   **Distribuição de Pedidos por Segmento**: Análise da participação de diferentes segmentos de clientes no volume total de pedidos.
-*   **Distribuição de Pedidos por Categoria de Produto**: Ranking das categorias de produtos mais vendidas.
-*   **Desempenho por Cidade**: Identificação das cidades com maior volume de pedidos.
-*   **Tendências Temporais de Pedidos**: Gráficos de linha que mostram a evolução dos pedidos ao longo dos meses e anos.
-*   **Análise de Tipo de Despacho**: Distribuição dos pedidos pelos diferentes métodos de entrega.
-*   **Dados Detalhados de Pedidos**: Uma tabela com informações granulares sobre cada pedido, incluindo Order ID, data, tipo de despacho, quantidade, estado, região e ID do cliente.
+*   **Order and Customer Overview**: Key indicators regarding the total number of customers, orders, states served, and market segments.
+*   **Order Distribution by Segment**: Analysis of the participation of different customer segments in the total order volume.
+*   **Order Distribution by Product Category**: Ranking of the best-selling product categories.
+*   **Performance by City**: Identification of cities with the highest order volume.
+*   **Temporal Order Trends**: Line charts showing the evolution of orders over months and years.
+*   **Dispatch Type Analysis**: Distribution of orders by different delivery methods.
+*   **Detailed Order Data**: A table with granular information about each order, including Order ID, date, dispatch type, quantity, state, region, and customer ID.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-Para a construção deste dashboard, a ferramenta empregada foi:
+For the construction of this dashboard, the tool employed was:
 
-*   **Looker Studio**: Utilizado para conectar a fonte de dados, realizar as transformações e modelagens necessárias, e construir os visuais interativos que compõem o dashboard e, com o design e o layout sendo desenvolvidos diretamente no ambiente do Looker Studio.
+*   **Looker Studio**: Used to connect the data source, perform the necessary transformations and modeling, and build the interactive visuals that compose the dashboard, with the design and layout being developed directly within the Looker Studio environment.
 
-## Processo de ETL (Extração, Transformação e Carregamento)
+## ETL Process (Extract, Transform, and Load)
 
-O processo de ETL para o Dashboard de Pedidos no Looker Studio foi executado para garantir a qualidade e a prontidão dos dados para análise:
+The ETL process for the Order Dashboard in Looker Studio was executed to ensure data quality and readiness for analysis:
 
-1.  **Extração**: Os dados brutos foram extraídos de uma fonte tabular em `.csv`, contendo informações detalhadas sobre cada transação, cliente, produto, localidade e método de envio.
-2.  **Transformação**: No ambiente do Looker Studio, foram realizadas as transformações necessárias para preparar os dados para a visualização. Isso incluiu:
-    *   Tratamento de dados, como padronização de campos e correção de valores.
-    *   Criação de campos calculados para métricas como o número de pedidos e clientes.
-    *   A modelagem de dados foi configurada para estabelecer as relações adequadas entre as dimensões (como região, segmento, categoria) e as métricas (como número de pedidos e clientes).
-3.  **Carregamento**: Após a conexão e as transformações, os dados foram carregados no modelo de dados do Looker Studio, tornando-os prontos para serem explorados através da criação de gráficos, tabelas e mapas interativos.
+1.  **Extraction**: Raw data was extracted from a tabular source in `.csv`, containing detailed information about each transaction, customer, product, location, and shipping method.
+2.  **Transformation**: Within the Looker Studio environment, the necessary transformations were performed to prepare the data for visualization. This included:
+    *   Data treatment, such as standardizing fields and correcting values.
+    *   Creation of calculated fields for metrics such as the number of orders and customers.
+    *   Data modeling was configured to establish appropriate relationships between dimensions (such as region, segment, category) and metrics (such as number of orders and customers).
+3.  **Loading**: After connection and transformations, the data was loaded into the Looker Studio data model, making it ready to be explored through the creation of interactive charts, tables, and maps.
 
 # Dashboard
 
-O dashboard apresenta um layout claro e conciso, com uma organização que facilita a compreensão das métricas mais importantes de pedidos e clientes. A interface combina cartões de KPI para uma visão rápida dos totais, gráficos de rosca e barras para distribuições percentuais e rankings, e gráficos de linha para tendências temporais. A interatividade é um recurso central, permitindo a filtragem por diferentes dimensões (região, segmento, categoria, cidade), o que facilita a investigação detalhada de qualquer aspecto dos dados de vendas e logística.
+The dashboard features a clear and concise layout, with an organization that facilitates understanding the most important order and customer metrics. The interface combines KPI cards for a quick overview of totals, donut and bar charts for percentage distributions and rankings, and line charts for temporal trends. Interactivity is a central feature, allowing filtering by different dimensions (region, segment, category, city), which facilitates detailed investigation of any aspect of sales and logistics data.
 
 <div style="text-align:center;">
   <img src="imagem1.png" alt="" />
@@ -52,76 +52,76 @@ O dashboard apresenta um layout claro e conciso, com uma organização que facil
 
 ## Insights
 
-A análise dos dados apresentados no dashboard revelou insights valiosos sobre a gestão de pedidos e o comportamento de compra:
+The analysis of the data presented in the dashboard revealed valuable insights into order management and purchasing behavior:
 
-*   **Visão Geral do Volume de Negócios**:
-    *   O dashboard mostra uma operação de grande escala, com um Total de Clientes de 793.
-    *   O volume de Pedidos atingiu 10 mil.
-    *   A abrangência geográfica é significativa, com o atendimento em 49 Estados.
-    *   Os pedidos estão distribuídos em 3 Segmentos de mercado.
+*   **Business Volume Overview**:
+    *   The dashboard shows a large-scale operation, with a **Total Customers** of 793.
+    *   **Order volume** reached 10 thousand.
+    *   Geographical coverage is significant, with service in **49 States**.
+    *   Orders are distributed across **3 Market Segments**.
 
 <div style="text-align:center;">
   <img src="imagem2.png" alt="" />
 </div>
 
-*   **Pedidos por Segmento**:
-    *   O segmento Consumer (Consumidor) domina o volume de pedidos, representando 51,9% do total.
-    *   Home Office e Corporate (Corporativo) contribuem com 17,2% e 30,2%, respectivamente.
-    *   A forte concentração no segmento Consumer indica a importância estratégica desse público para o volume de vendas.
+*   **Orders by Segment**:
+    *   The **Consumer** segment dominates order volume, representing 51.9% of the total.
+    *   Home Office and Corporate contribute 17.2% and 30.2%, respectively.
+    *   The strong concentration in the Consumer segment indicates the strategic importance of this audience for sales volume.
 
 <div style="text-align:center;">
   <img src="imagem4.png" alt="" />
 </div>
 
-*   **Pedidos por Categoria de Produto**:
-    *   Office Supplies (Materiais de Escritório) lidera com 60,3% dos pedidos.
-    *   Technology (Tecnologia) e Furniture (Móveis) seguem com 21,2% e 18,5%, respectivamente.
-    *   Isso aponta para as categorias de produtos que mais impulsionam o volume de transações, auxiliando na gestão de estoque e campanhas de marketing.
+*   **Orders by Product Category**:
+    *   **Office Supplies** leads with 60.3% of orders.
+    *   Technology and Furniture follow with 21.2% and 18.5%, respectively.
+    *   This points to the product categories that most drive transaction volume, assisting in inventory management and marketing campaigns.
 
 <div style="text-align:center;">
   <img src="imagem3.png" alt="" />
 </div>
 
-*   **Pedidos por Cidade**:
-    *   New York City se destaca como a cidade com o maior volume de pedidos.
-    *   Outras cidades importantes incluem Philadelphia, Seattle, Los Angeles e San Francisco
-    *   Essa análise geográfica é crucial para o planejamento logístico e para identificar mercados-chave.
+*   **Orders by City**:
+    *   **New York City** stands out as the city with the highest order volume.
+    *   Other important cities include Philadelphia, Seattle, Los Angeles, and San Francisco.
+    *   This geographical analysis is crucial for logistics planning and identifying key markets.
 
 <div style="text-align:center;">
   <img src="imagem5.png" alt="" />
 </div>
 
-*   **Tendências Temporais de Pedidos**:
-    *   Os gráficos "Pedidos - Tendência (Mês)" e "Pedidos - Tendência (Ano)" permitem visualizar a evolução do volume de pedidos ao longo do tempo.
-    *   A análise anual mostra dados de 2014 a 2017, revelando padrões de crescimento ou sazonalidade.
+*   **Temporal Order Trends**:
+    *   The "Orders - Trend (Month)" and "Orders - Trend (Year)" charts allow visualizing the evolution of order volume over time.
+    *   Annual analysis shows data from 2014 to 2017, revealing growth patterns or seasonality.
   <div style="text-align:center;">
     <img src="imagem6.png" alt="" />
   </div>
-    *   A tendência mensal, com picos e vales em diferentes meses, oferece insights para o planejamento operacional e de marketing ao longo do ano.
+    *   The monthly trend, with peaks and valleys in different months, offers insights for operational and marketing planning throughout the year.
 
 <div style="text-align:center;">
   <img src="imagem7.png" alt="" />
 </div>
 
-## Considerações
+## Considerations
 
-A partir dos insights obtidos, algumas considerações importantes surgem:
+From the insights obtained, some important considerations arise:
 
-*   **Foco no Consumidor**: A dominância do segmento Consumer reforça a necessidade de estratégias de marketing e atendimento focadas nesse público.
-*   **Otimização de Estoque e Compras**: As categorias de produtos mais populares (Office Supplies, Technology, Furniture) devem ter seus estoques cuidadosamente gerenciados para evitar rupturas e maximizar as vendas.
-*   **Planejamento Logístico e Expansão Geográfica**: A identificação das cidades e regiões de alto volume de pedidos é crucial para otimizar rotas de entrega e para avaliar potenciais de expansão em novas localidades.
-*   **Eficiência de Entrega**: A análise dos tipos de despacho pode guiar a otimização dos serviços de entrega, buscando maior eficiência e custo-benefício.
+*   **Consumer Focus**: The dominance of the Consumer segment reinforces the need for marketing and service strategies focused on this audience.
+*   **Inventory and Procurement Optimization**: The most popular product categories (Office Supplies, Technology, Furniture) should have their inventories carefully managed to avoid stockouts and maximize sales.
+*   **Logistics Planning and Geographical Expansion**: Identifying high-volume order cities and regions is crucial for optimizing delivery routes and evaluating potential for expansion into new locations.
+*   **Delivery Efficiency**: Analyzing dispatch types can guide the optimization of delivery services, seeking greater efficiency and cost-effectiveness.
 
-## Conclusão
+## Conclusion
 
-O Dashboard foi uma ferramenta analítica eficaz que transformou dados brutos de transações em inteligência acionável para a gestão de vendas e logística. Sua principal contribuição residiu na capacidade de:
+The Dashboard was an effective analytical tool that transformed raw transaction data into actionable intelligence for sales and logistics management. Its main contribution lies in its ability to:
 
-*   Fornecer uma visão clara do volume de negócios e da base de clientes.
-*   Identificar padrões de consumo por segmento e categoria de produto.
-*   Analisar tendências temporais e a distribuição geográfica dos pedidos.
-*   Demonstrar a proficiência em utilizar o Looker Studio para construir análises robustas e intuitivas.
+*   Provide a clear view of business volume and customer base.
+*   Identify consumption patterns by segment and product category.
+*   Analyze temporal trends and the geographical distribution of orders.
+*   Demonstrate proficiency in using Looker Studio to build robust and intuitive analyses.
 
-## Link para o Dashboard:
-<a href="https://lookerstudio.google.com/u/0/reporting/53c1abb1-9218-456b-9d7f-28f6702033de/page/0avvD" target="_blank" rel="noopener noreferrer">
-  Clique aqui para acessar o relatório no Looker Studio
+## Link to the Dashboard:
+<a href="https://lookerstudio.google.com/u/0/reporting/53c1abb1-9218-456b-9d7f-28f6702033de/page/0avvD"  rel="noopener noreferrer">
+  Click here to access the report on Looker Studio
 </a>
